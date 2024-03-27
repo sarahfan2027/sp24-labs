@@ -101,15 +101,15 @@ TEST(HashtableTest, TestRemoveStress) {
 	ASSERT_TRUE(test_remove(all, test));
 }
 
-// TEST(HashtableTest, TestRemoveSUPERSTRESS_AGHHHHHHHHH) {
-// 	set<string> all;
-// 	srand(1);
-// 	HashTable test(1000);
+TEST(HashtableTest, TestRemoveSUPERSTRESS_AGHHHHHHHHH) {
+	set<string> all;
+	srand(1);
+	HashTable test(1000);
 
-// 	for(int i = 0; i < 1000; i++) {
-// 		string gen = gen_random(9);
-// 		all.insert(gen);
-// 		test.insert(gen);
-// 	}
-// 	ASSERT_TRUE(test_remove(all, test));
-// }
+	for(int i = 0; i < 1000; i++) {
+		string gen = gen_random(9);
+		all.insert(gen);
+		test.insert(gen);
+	}
+	ASSERT_TRUE(test_remove(all, test));
+}
