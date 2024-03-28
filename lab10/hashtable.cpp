@@ -88,16 +88,17 @@ void HashTable::remove(string str) {
 	for (int i = 0; i < size; i ++) {
 		if (data[hash] == nullptr) return;
 		if (*data[hash] == str) {
-			delete data[hash];
+			delete data[hash];  
 			data[hash] = nullptr;
 
 			//rehash next elements
 			int next = (hash + 1) % size;
 			while (data[next] != nullptr) {
-				string temp = *data[next];
+				string temp = *data[next]; 
 
 				delete data[next];
 				data[next] = nullptr;
+
 				insert(temp);
 				next = (next + 1) % size;
 			}
